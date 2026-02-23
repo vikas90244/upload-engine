@@ -9,7 +9,7 @@ async fn main(){
 
     let app = router::create_router();
       let port: u16 = env::var("PORT")
-        .unwrap_or_else(|_| "3000".to_string())
+        .unwrap_or_else(|_| "8080".to_string())
         .parse()
         .expect("PORT must be a number");
 
