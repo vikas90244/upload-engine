@@ -35,7 +35,7 @@ pub async fn receive_chunks(
     // Create file if doesn't exist
     // Write to file if it exists
     let dir = upload_dir();
-    let file_path = dir.join(file);
+    let file_path = dir.join(filename);
     tokio::fs::create_dir_all(&dir).await
                          .map_err(|e|  (StatusCode::INTERNAL_SERVER_ERROR, e.to_string()))?;
     let mut file = OpenOptions::new()
